@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa and Lisa: on the Hunt 2025</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Banner Image at the top -->
+    <div class="hero">
+        <img src="../hero.webp" alt="Lisa and Lisa, on the Hunt 2025">
+    </div>
+
+    <!-- Welcome Section in the middle -->
+    <div class="welcome">
+        <h2>The Proposal</h2>
+        <h2>Activity Instructions</h2>
+        <h3><b>How to Complete This Stop:</b></h3>
+        <p>
+            1. Find a stranger willing to record a short video on your phone
+            <br>
+            <br>
+            2. Taking the provided jewrely box, one of you must get down on one knee (slowly, your goal is to attract attention)
+            <br>
+            <br>
+            3. Look longingly at the other, and say "Lisa, would you ... do me the great honor ... of watering my plants while I am out of town?".  Feel free to embelish your proposal as you feel moved.
+            <br>
+            <br>
+            4. SMS the video to the group chat, and you will receive your next clue via a link in the chat.
+            <br>
+        </p>
+    </div>
+
+     <!-- Collapsible "I need help" Section -->
+    <div class="instructions">
+        <button class="collapsible">We Need Help!</button>
+        <div class="content">
+            <p>Ways to get help:</p>
+            <ul>
+                <li><a href="sms:+17274532317?body=We%20need%20help!">Send an SMS SOS</a></li>
+                <li><a href="tel:+17274532317">Give the gamemaster a ring.</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Collapsible functionality for the "We Need Help" section
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
