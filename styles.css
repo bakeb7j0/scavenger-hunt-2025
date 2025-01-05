@@ -73,3 +73,64 @@ button:disabled {
     background-color: #aaa;
     cursor: not-allowed;
 }
+
+/* Styles for the collapsible section */
+.collapsible {
+    background-color: #4A4A8C;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.collapsible:hover {
+    background-color: #6A6A8C;
+}
+
+.collapsible.active {
+    background-color: #6A6A8C;
+}
+
+.content {
+    padding: 10px 20px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.content p, .content ul {
+    margin: 10px 0;
+}
+
+/* Center and style the welcome section */
+.welcome {
+    width: 80%; /* Make it 80% of the page width */
+    margin: 50px auto; /* Center it horizontally and add vertical spacing */
+    padding: 30px;
+    background-color: #8a4ab8; /* A matching purple background for the welcome section */
+    color: white; /* Text color to stand out against the purple background */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it stand out */
+}
+
+.welcome h2 {
+    font-size: 2em; /* Larger title text */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+.welcome p {
+    font-size: 1.2em; /* Slightly larger paragraph text */
+    line-height: 1.6;
+}
+
+.middle ul {
+    text-align: center;
+    list-style-position: inside;
+}

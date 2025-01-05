@@ -1,1 +1,80 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa and Lisa: on the Hunt 2025</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Banner Image at the top -->
+    <div class="hero">
+        <img src="hero.webp" alt="Lisa and Lisa, on the Hunt 2025">
+    </div>
+
+    <!-- Welcome Section in the middle -->
+    <div class="welcome">
+        <h2>Welcome to Lisa and Lisa on the Hunt 2025!</h2>
+        <h3><b>How to Play:</b></h3>
+        <p>You have 7 stops to make on your adventure.  For each step, you will receive and envelope with a QR code. Scanning the QR code will reveal a puzzle.  
+            Solve the word scramble to reveal the second clue.  Using the answer to the word scramble, and the contents of the clue you revealed, you 
+            should be able to quickly figure out where to go.  If you arrive at a business, head in, they are expecting you.  If you end up at a landmark,
+            seach for another envelope, it will have instructions indicating what must be done at the stop, which will include sending an SMS to the group chat
+            with proof of task completion.  Upon completing the stop, you will either be given
+            a new envelope, or you will receive a new link in the group chat.  Lather, Rinse, Repeat until 5pm!  
+        </p>
+        <br>
+        <br>
+        <h2>Frequently Asked Questions</h2>
+        <h3><b>How do I scan a QR code?</b></h3>
+        <p>
+        Open your camera app<br>
+        point it at the QR code and hold the phone still<br>
+        a link will appear on the screen, press it and it will take you to the appropriate page on the site<br>
+        </p>
+        <br>
+        <h3><b>What if we are stumped?</b></h3>
+        <p>
+        At the bottom of each page are expandable sections with instructions on what to do with the puzzle or clue on the page,<br>
+        as well as one to call for help via either text or phone call.  Don't be shy!<br>
+        Don't spend a lot of time on something you can't figure out!<br>
+        </p>
+        <br>
+        <h2>Let's get started!</h2>
+        Scan the QR code below or click <a href="https://brave-sand-0c810bd10.4.azurestaticapps.net/unscramble.html?STOPID=stop1&SCRAMBLE=pbiulx">here</a>.
+        <br>
+        <br>
+        <img src="stop1-qr.png" width="20%">
+    </div>
+
+    <!-- Collapsible "We Need Help" Section at the bottom -->
+    <div class="help-section">
+        <button class="collapsible">We Need Help</button>
+        <div class="content">
+            <p>If you need assistance with unscrambling the phrases, don't hesitate to reach out for help. We are here to guide you every step of the way!</p>
+            <ul>
+                <li>If you're stuck, try breaking down the letters and looking for clues.</li>
+                <li>Contact us if you're facing any issues or need hints.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Collapsible functionality for the "We Need Help" section
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

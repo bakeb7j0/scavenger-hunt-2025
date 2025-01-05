@@ -23,6 +23,33 @@
             <button type="submit" id="submitBtn" disabled>Submit</button>
         </form>
     </div>
+    <!-- Collapsible "Instructions" Section -->
+    <div class="instructions">
+        <button class="collapsible">Instructions</button>
+        <div class="content">
+            <p>Here are some instructions for unscrambling the phrase:</p>
+            <ul>
+                <li>Take the scrambled letters and rearrange them to form a meaningful phrase.</li>
+                <li>Once you think you've got it, enter the unscrambled phrase in the text box above.</li>
+                <li>If you have entered the correct phrase, the submit button will enable.  When it does, click it to get to your next clue.</li>
+                <li>Phrases will be all lowercase letters.</li>
+                <li>Phrases may have spaces.  If they do, then each word is it's own scramble. For Exampe, "tah bta" is two words and unscrambles to "hat bat".</li>
+                <li>Phrases give a hint as to your next activity.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Collapsible "I need help" Section -->
+    <div class="instructions">
+        <button class="collapsible">We Need Help!</button>
+        <div class="content">
+            <p>Ways to get help:</p>
+            <ul>
+                <li><a href="sms:+17274532317?body=We%20need%20help!">Send an SMS SOS</a></li>
+                <li><a href="tel:+17274532317">Give the gamemaster a ring.</a></li>
+            </ul>
+        </div>
+    </div>
 
     <script>
         // Function to get the value of a GET variable
@@ -76,6 +103,20 @@
             // The form action is already set dynamically based on the checkPageExists function
             // No need to modify the action URL here since it's set by the fetch
         });
+
+        // Collapsible functionality for the "Instructions" section
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
     </script>
 </body>
 </html>
