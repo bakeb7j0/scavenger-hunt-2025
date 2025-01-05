@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa and Lisa: on the Hunt 2025</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Banner Image at the top -->
+    <div class="hero">
+        <img src="../hero.webp" alt="Lisa and Lisa, on the Hunt 2025">
+    </div>
+
+    <!-- Welcome Section in the middle -->
+    <div class="welcome">
+        <h2>The Marbel Maidens</h2>
+        <h2>Activity Instructions</h2>
+        <h3><b>How to Complete This Stop:</b></h3>
+        <p>
+            1. Open the bag provided to you. It contains 1 bag of shooter/player marbles and 3 bags of "game marbles" with a gift card.
+            <br>
+            <br>
+            2. Your task is to find someome to play you in a game of marbles.  You two will be on one team, your opponents will be on the other.
+            <br>
+            <br>
+            3. You must get the opposing team to bet something against your gift card.  If you win, you keep the game marbles, gift card, and whatever they bet.  If they win, they keep the game marbles, the gift card, and whatever they bet.
+            <br>
+            <br>
+            4. When each game is over, take a picture with your opponents and SMS it to the group chat.
+            <br>
+            <br>
+            5. Play 3 games, or until 2:10 PM, whichever comes first.
+            <br>
+            <br>
+        </p>
+        <h3><b>House rules for team marbles:</b></h3>
+        <p>
+            1. To set up the game, open a game bag and place the 10 marbles in the middle of the circle.
+            <br>
+            <br>
+            2. A representative from each team plays Rock-Paper-Scissors to decide who goes first.
+            <br>
+            <br>
+            3. Teams alternate shooting.  Kneel outside the ring and flick your shooter marble at the marbles in the ring, aiming to hit as many marbles out of the ring as possible.
+            <br>
+            <br>
+            4. If you knock marbles out of the ring, your team gets to go again.  Your team keeps any marbles they knock out of the ring.
+            <br>
+            <br>
+            5. If you fail to knock any marbles out of the ring, play moves to the other team.
+            <br>
+            <br>
+            6. Teammates must alternate between shots if the team has more than one player.
+            <br>
+            <br>
+            7. Usually you leave your shooter marble in the ring after a shot.  Since we don't have a lot of shooter marbles, you should instead collect your shooter marble after each shot.
+            <br>
+            <br>
+            If you want to see a couple of videos with different style of marble shooting check out <a href="https://www.youtube.com/watch?v=D_KyKEseN8M">this one</a> and <a href="https://www.youtube.com/watch?v=bQd5iE7ocmo">this one.</a>
+        </p>
+    </div>
+
+     <!-- Collapsible "I need help" Section -->
+    <div class="instructions">
+        <button class="collapsible">We Need Help!</button>
+        <div class="content">
+            <p>Ways to get help:</p>
+            <ul>
+                <li><a href="sms:+17274532317?body=We%20need%20help!">Send an SMS SOS</a></li>
+                <li><a href="tel:+17274532317">Give the gamemaster a ring.</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Collapsible functionality for the "We Need Help" section
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
