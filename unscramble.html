@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa and Lisa: on the Hunt 2025</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <img src="hero.webp" alt="Lisa and Lisa, on the Hunt 2025">
+    </div>
+    <div class="form-container">
+        
+        <h2>Unscramble This Phrase:</h2>
+        <p><strong id="scrambledText">---</strong></p>
+        <form id="validationForm" method="GET">
+            <label for="password">Unscrambled Phrase:</label>
+            <input type="text" id="password" placeholder="What's the phrase?" name="SCRAMBLE">
+
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to get the value of a GET variable
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the SCRAMBLE and STOPID parameters from the URL
+        const scrambleText = getQueryParam('SCRAMBLE');
+        const stopid = getQueryParam('STOPID');
+        const scrambledTextElement = document.getElementById('scrambledText');
+        const passwordField = document.getElementById('password');
+        const submitButton = document.getElementById('submitBtn');
+
+        // Set scrambled text based on the SCRAMBLE parameter or default to '---'
+        if (scrambleText) {
+            scrambledTextElement.textContent = decodeURIComponent(scrambleText); // decode the URI-encoded SCRAMBLE value
+        } else {
+            scrambledTextElement.textContent = '---'; // Default value if SCRAMBLE is missing
+        }
+
+        // Check if the page exists at STOPID/PAGE.html
+        function checkPageExists(stopid, page) {
+            const url = `${stopid}/${page}.html`;
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        // Set the form action to the corresponding page if it exists
+                        document.getElementById('validationForm').action = url;
+                        submitButton.disabled = false;
+                    } else {
+                        submitButton.disabled = true;
+                    }
+                })
+                .catch(() => {
+                    submitButton.disabled = true;
+                });
+        }
+
+        // Event listener for password input to check if the page exists
+        passwordField.addEventListener('input', () => {
+            const page = passwordField.value;
+            checkPageExists(stopid, page);
+        });
+
+        // Append STOPID and SCRAMBLE GET parameters when submitting the form
+        document.getElementById('validationForm').addEventListener('submit', function(event) {
+            const scrambleValue = passwordField.value;
+
+            // The form action is already set dynamically based on the checkPageExists function
+            // No need to modify the action URL here since it's set by the fetch
+        });
+    </script>
+</body>
+</html>
